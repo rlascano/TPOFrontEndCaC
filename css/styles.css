@@ -1,0 +1,133 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: black;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  color: white;
+}
+
+.nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  transform: scale(1, 0);
+  transition: transform ease-in-out 500ms;
+  transform-origin: top;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav a:hover {
+  color: grey;
+}
+
+.nav-show {
+  transform: scale(1, 1);
+}
+
+.nav-show a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 300ms;
+}
+
+.nav-toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 1em;
+  height: 100%;  
+  color: white;
+  display: flex;
+  align-items: center;  
+}
+
+.nav-toggle span, 
+.nav-toggle span::after,
+.nav-toggle span::before {
+  display: block;
+  background-color: white;
+  width: 2em;
+  height: 2px;
+  position: relative;
+}
+
+.nav-toggle span::after,
+.nav-toggle span::before {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle span::after {
+  top: 7px;
+}
+
+.nav-toggle span::before {
+  bottom: 7px;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  .nav {
+    all: unset;
+    grid-column: 3 / 4;   
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;     
+  }
+
+  .nav ul {    
+    display: flex;    
+    justify-content: flex-end;
+  } 
+
+  .nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  .nav a {
+    opacity: 1;
+  }
+}
+
