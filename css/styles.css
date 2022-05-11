@@ -1,26 +1,44 @@
-*, *::before, *::after {
-   box-sizing: border-box;
-}
+/*F9D71C*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: #000;
+  background-image: url("/img/space.jpg");
+  letter-spacing: 0.1em;
+}
+
 header {
-  background-color: black;
-  text-align: center;
   position: fixed;
   z-index: 999;
+  top: 0;
+  background-color: #000;
+  text-align: center;
   width: 100%;
   color: white;
+  margin: 0;
+  padding: 1.2em;
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .nav {
   position: absolute;
   text-align: left;
+  background-color: #000;
   top: 100%;
   left: 0;
-  background-color: black;
   width: 100%;
   transform: scale(1, 0);
   transition: transform ease-in-out 500ms;
@@ -41,13 +59,13 @@ header {
 .nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
 
 .nav a:hover {
-  color: grey;
+  color: #f9d71c;
 }
 
 .nav-show {
@@ -61,16 +79,15 @@ header {
 
 .nav-toggle {
   position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: 1em;
-  height: 100%;  
   color: white;
+  height: 100%;
+  top: 0;
+  left: 1em;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
-.nav-toggle span, 
+.nav-toggle span,
 .nav-toggle span::after,
 .nav-toggle span::before {
   display: block;
@@ -82,7 +99,7 @@ header {
 
 .nav-toggle span::after,
 .nav-toggle span::before {
-  content: '';
+  content: "";
   position: absolute;
 }
 
@@ -94,7 +111,125 @@ header {
   bottom: 7px;
 }
 
-@media screen and (min-width: 800px) {
+.container {
+  margin-top: 30px;
+}
+
+.hero {
+  width: 100%;
+  height: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_title {
+  text-align: center;
+  color: #f9d71c;
+  font-size: 2rem;
+}
+
+.secondary_nav {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  margin: 0;
+  padding: 2em 0;
+}
+
+.secondary_nav h3 {
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.secondary_nav h3::after {
+  position: absolute;
+  top: 100%;
+  margin-top: .5em 0;
+  left: 50%;
+  transform: translate(-50%, .75em);
+  content: '';
+  width: 200px;
+  height: 2px;
+  background-color: #f9d71c;
+  border-radius: 2px;
+}
+
+.secondary_nav ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.secondary_nav li {
+  margin-bottom: 1.2em;
+  padding: 0;
+}
+
+.secondary_nav a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.secondary_nav a:hover {
+  color: #f9d71c;
+}
+
+.main {
+  margin: 4em 2em;
+}
+
+.planet {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6em;  
+  margin-bottom: 5em;
+}
+
+.planet_title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #f9d71c;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.planet_img {
+  width: 100%;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.planet_img img {
+  max-width: 100%;
+}
+
+.planet_data {
+  margin: 2em 0;
+  color: #FFF;
+}
+
+.planet_data h4 {  
+  font-size: 1.5rem;
+  margin-bottom: .25em;
+  color: #f9d71c;
+}
+
+.planet_data ul {
+  margin: 0;
+  padding: 1em;
+}
+
+.planet_desc {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
   .nav-toggle {
     display: none;
   }
@@ -105,7 +240,7 @@ header {
   }
 
   .logo {
-    grid-column: 2 / 3;
+    grid-column: 2 / 3;    
   }
 
   .nav {
@@ -129,5 +264,21 @@ header {
   .nav a {
     opacity: 1;
   }
-}
 
+  .secondary_nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .secondary_nav h3::after {
+    display: none;
+  }
+
+  .secondary_nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+} 
