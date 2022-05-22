@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Sistema Solar</title>
   </head>
   <body>
     <header>
       <h1 class="logo">Sistema Solar</h1>
-      <nav id="nav" class="nav">        
+      <nav id="nav" class="nav">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Quienes Somos</a></li>
-          <li><a href="">Contacto</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes.html">Quienes Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
       <div class="nav-toggle">
@@ -22,24 +26,24 @@
       </div>
     </header>
     <div class="container">
-      <div class="hero">      
-        <h2 class="hero_title">El Sistema Solar</h2>      
-      </div>    
+      <div class="hero">
+        <h2 class="hero_title">El Sistema Solar</h2>
+      </div>
       <aside class="secondary_nav">
         <h3>Explorar</h3>
         <ul>
-          <li><a href="#">Sol</a></li>
-          <li><a href="#">Mercurio</a></li>
-          <li><a href="#">Venus</a></li>
-          <li><a href="#">Tierra</a></li>
-          <li><a href="#">Marte</a></li>
+          <li><a href="#sol">Sol</a></li>
+          <li><a href="#mercurio">Mercurio</a></li>
+          <li><a href="#venus">Venus</a></li>
+          <li><a href="#tierra">Tierra</a></li>
+          <li><a href="#marte">Marte</a></li>
         </ul>
-      </aside>    
+      </aside>
       <main class="main">
-        <article class="planet">
+        <article class="planet" id="sol">
           <h3 class="planet_title">Sol</h3>
           <div class="planet_img">
-            <img src="img/sol.png" alt="">          
+            <img src="img/sol.png" alt="" />
           </div>
           <div class="planet_data">
             <h4>Datos</h4>
@@ -51,13 +55,23 @@
             </ul>
           </div>
           <div class="planet_desc">
-            El Sol (del latín sol, solis, ‘dios Sol invictus’ o ‘sol’, Helios en la mitología griega, a su vez de la raíz protoindoeuropea sauel-, ‘brillar’)4​ es una estrella de tipo-G de la secuencia principal y clase de luminosidad V que se encuentra en el centro del sistema solar y constituye la mayor fuente de radiación electromagnética de este sistema planetario.5​ Es una esfera casi perfecta de plasma, con un movimiento convectivo interno que genera un campo magnético a través de un proceso de dinamo. Cerca de tres cuartas partes de la masa del Sol constan de hidrógeno; el resto es principalmente helio, con cantidades mucho más pequeñas de elementos, incluyendo el oxígeno, carbono, neón y hierro.
+            El Sol (del latín sol, solis, ‘dios Sol invictus’ o ‘sol’, Helios en
+            la mitología griega, a su vez de la raíz protoindoeuropea sauel-,
+            ‘brillar’)4​ es una estrella de tipo-G de la secuencia principal y
+            clase de luminosidad V que se encuentra en el centro del sistema
+            solar y constituye la mayor fuente de radiación electromagnética de
+            este sistema planetario.5​ Es una esfera casi perfecta de plasma,
+            con un movimiento convectivo interno que genera un campo magnético a
+            través de un proceso de dinamo. Cerca de tres cuartas partes de la
+            masa del Sol constan de hidrógeno; el resto es principalmente helio,
+            con cantidades mucho más pequeñas de elementos, incluyendo el
+            oxígeno, carbono, neón y hierro.
           </div>
         </article>
-        <article class="planet">
+        <article class="planet" id="mercurio">
           <h3 class="planet_title">Mercurio</h3>
           <div class="planet_img">
-            <img src="img/mercurio.png" alt="">          
+            <img src="img/mercurio.png" alt="" />
           </div>
           <div class="planet_data">
             <h4>Datos</h4>
@@ -69,13 +83,23 @@
             </ul>
           </div>
           <div class="planet_desc">
-            Mercurio es el planeta del sistema solar más cercano al Sol y el más pequeño. Forma parte de los denominados planetas interiores y carece de satélites naturales al igual que Venus. Se conocía muy poco sobre su superficie hasta que fue enviada la sonda planetaria Mariner 10 y se hicieron observaciones con radar y radiotelescopios. Posteriormente fue estudiado por la sonda MESSENGER de la NASA y actualmente la astronave de la Agencia Europea del Espacio (ESA) denominada BepiColombo, lanzada en octubre de 2018, se halla en vuelo rumbo a Mercurio a donde llegará en 2025 y se espera que aporte nuevos conocimientos sobre el origen y composición del planeta, así como de su geología y campo magnético.
+            Mercurio es el planeta del sistema solar más cercano al Sol y el más
+            pequeño. Forma parte de los denominados planetas interiores y carece
+            de satélites naturales al igual que Venus. Se conocía muy poco sobre
+            su superficie hasta que fue enviada la sonda planetaria Mariner 10 y
+            se hicieron observaciones con radar y radiotelescopios.
+            Posteriormente fue estudiado por la sonda MESSENGER de la NASA y
+            actualmente la astronave de la Agencia Europea del Espacio (ESA)
+            denominada BepiColombo, lanzada en octubre de 2018, se halla en
+            vuelo rumbo a Mercurio a donde llegará en 2025 y se espera que
+            aporte nuevos conocimientos sobre el origen y composición del
+            planeta, así como de su geología y campo magnético.
           </div>
         </article>
-        <article class="planet">
+        <article class="planet" id="venus">
           <h3 class="planet_title">Venus</h3>
           <div class="planet_img">
-            <img src="img/venus.png" alt="">          
+            <img src="img/venus.png" alt="" />
           </div>
           <div class="planet_data">
             <h4>Datos</h4>
@@ -87,11 +111,111 @@
             </ul>
           </div>
           <div class="planet_desc">
-            Venus es el segundo planeta del sistema solar en orden de proximidad al Sol y el tercero en cuanto a tamaño en orden ascendente después de Mercurio y Marte. Al igual que Mercurio, carece de satélites naturales. Recibe su nombre en honor a Venus, la diosa romana del amor (en la Antigua Grecia, Afrodita). Al ser el segundo objeto natural más brillante después de la Luna, puede ser visto en un cielo nocturno despejado a simple vista. Se trata de un planeta interior de tipo rocoso y terrestre, llamado con frecuencia el planeta hermano de la Tierra, ya que ambos son similares en cuanto a tamaño, masa y composición, aunque totalmente diferentes en cuestiones térmicas y atmosféricas (la temperatura media de Venus es de 463,85 °C). Su órbita es una elipse con una excentricidad de menos del 1 %, formando la órbita más circular de todos los planetas; apenas supera la de Neptuno. Su presión atmosférica es 90 veces superior a la terrestre; es, por lo tanto, la mayor presión atmosférica de todos los planetas rocosos del sistema solar. Es de color blanco/amarillento por su atmósfera compuesta mayoritariamente por dióxido de carbono (CO2), ácido sulfhídrico (H2S) y nitrógeno(N2).
+            Venus es el segundo planeta del sistema solar en orden de proximidad
+            al Sol y el tercero en cuanto a tamaño en orden ascendente después
+            de Mercurio y Marte. Al igual que Mercurio, carece de satélites
+            naturales. Recibe su nombre en honor a Venus, la diosa romana del
+            amor (en la Antigua Grecia, Afrodita). Al ser el segundo objeto
+            natural más brillante después de la Luna, puede ser visto en un
+            cielo nocturno despejado a simple vista. Se trata de un planeta
+            interior de tipo rocoso y terrestre, llamado con frecuencia el
+            planeta hermano de la Tierra, ya que ambos son similares en cuanto a
+            tamaño, masa y composición, aunque totalmente diferentes en
+            cuestiones térmicas y atmosféricas (la temperatura media de Venus es
+            de 463,85 °C). Su órbita es una elipse con una excentricidad de
+            menos del 1 %, formando la órbita más circular de todos los
+            planetas; apenas supera la de Neptuno. Su presión atmosférica es 90
+            veces superior a la terrestre; es, por lo tanto, la mayor presión
+            atmosférica de todos los planetas rocosos del sistema solar. Es de
+            color blanco/amarillento por su atmósfera compuesta mayoritariamente
+            por dióxido de carbono (CO2), ácido sulfhídrico (H2S) y
+            nitrógeno(N2).
+          </div>
+        </article>
+        <article class="planet" id="tierra">
+          <h3 class="planet_title">Tierra</h3>
+          <div class="planet_img">
+            <img src="img/tierra.png" alt="" />
+          </div>
+          <div class="planet_data">
+            <h4>Datos</h4>
+            <ul>
+              <li>Masa: 4,869x10<sup>24</sup> kg</li>
+              <li>Volumen: 9,28x10<sup>11</sup> km<sup>3</sup></li>
+              <li>Densidad: 5,24 g/cm<sup>3</sup></li>
+              <li>Superficie: 4,60x10<sup>8</sup> km<sup>2</sup></li>
+            </ul>
+          </div>
+          <div class="planet_desc">
+            Venus es el segundo planeta del sistema solar en orden de proximidad
+            al Sol y el tercero en cuanto a tamaño en orden ascendente después
+            de Mercurio y Marte. Al igual que Mercurio, carece de satélites
+            naturales. Recibe su nombre en honor a Venus, la diosa romana del
+            amor (en la Antigua Grecia, Afrodita). Al ser el segundo objeto
+            natural más brillante después de la Luna, puede ser visto en un
+            cielo nocturno despejado a simple vista. Se trata de un planeta
+            interior de tipo rocoso y terrestre, llamado con frecuencia el
+            planeta hermano de la Tierra, ya que ambos son similares en cuanto a
+            tamaño, masa y composición, aunque totalmente diferentes en
+            cuestiones térmicas y atmosféricas (la temperatura media de Venus es
+            de 463,85 °C). Su órbita es una elipse con una excentricidad de
+            menos del 1 %, formando la órbita más circular de todos los
+            planetas; apenas supera la de Neptuno. Su presión atmosférica es 90
+            veces superior a la terrestre; es, por lo tanto, la mayor presión
+            atmosférica de todos los planetas rocosos del sistema solar. Es de
+            color blanco/amarillento por su atmósfera compuesta mayoritariamente
+            por dióxido de carbono (CO2), ácido sulfhídrico (H2S) y
+            nitrógeno(N2).
+          </div>
+        </article>
+        <article class="planet" id="marte">
+          <h3 class="planet_title">Marte</h3>
+          <div class="planet_img">
+            <img src="img/marte.png" alt="" />
+          </div>
+          <div class="planet_data">
+            <h4>Datos</h4>
+            <ul>
+              <li>Masa: 4,869x10<sup>24</sup> kg</li>
+              <li>Volumen: 9,28x10<sup>11</sup> km<sup>3</sup></li>
+              <li>Densidad: 5,24 g/cm<sup>3</sup></li>
+              <li>Superficie: 4,60x10<sup>8</sup> km<sup>2</sup></li>
+            </ul>
+          </div>
+          <div class="planet_desc">
+            Venus es el segundo planeta del sistema solar en orden de proximidad
+            al Sol y el tercero en cuanto a tamaño en orden ascendente después
+            de Mercurio y Marte. Al igual que Mercurio, carece de satélites
+            naturales. Recibe su nombre en honor a Venus, la diosa romana del
+            amor (en la Antigua Grecia, Afrodita). Al ser el segundo objeto
+            natural más brillante después de la Luna, puede ser visto en un
+            cielo nocturno despejado a simple vista. Se trata de un planeta
+            interior de tipo rocoso y terrestre, llamado con frecuencia el
+            planeta hermano de la Tierra, ya que ambos son similares en cuanto a
+            tamaño, masa y composición, aunque totalmente diferentes en
+            cuestiones térmicas y atmosféricas (la temperatura media de Venus es
+            de 463,85 °C). Su órbita es una elipse con una excentricidad de
+            menos del 1 %, formando la órbita más circular de todos los
+            planetas; apenas supera la de Neptuno. Su presión atmosférica es 90
+            veces superior a la terrestre; es, por lo tanto, la mayor presión
+            atmosférica de todos los planetas rocosos del sistema solar. Es de
+            color blanco/amarillento por su atmósfera compuesta mayoritariamente
+            por dióxido de carbono (CO2), ácido sulfhídrico (H2S) y
+            nitrógeno(N2).
           </div>
         </article>
       </main>
     </div>
+    <footer>
+      <div class="social-media">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <h6>Copywright 2022 - Rodrigo Lascano</h6>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>

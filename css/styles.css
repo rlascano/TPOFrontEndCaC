@@ -113,9 +113,18 @@ header {
 
 .container {
   margin-top: 30px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr minmax(80px, 1fr) minmax(240px, 4fr) 1fr;
+  grid-template-areas:
+    "hero hero hero hero"
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
 }
 
 .hero {
+  grid-area: hero;
   width: 100%;
   height: 20em;
   display: flex;
@@ -130,7 +139,8 @@ header {
 }
 
 .secondary_nav {
-  background-color: rgba(0, 0, 0, .5);
+  grid-area: nav;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   margin: 0;
   padding: 2em 0;
@@ -138,7 +148,7 @@ header {
 
 .secondary_nav h3 {
   text-align: center;
-  color: #FFF;
+  color: #fff;
   margin-bottom: 2em;
   position: relative;
 }
@@ -146,10 +156,10 @@ header {
 .secondary_nav h3::after {
   position: absolute;
   top: 100%;
-  margin-top: .5em 0;
+  margin-top: 0.5em 0;
   left: 50%;
-  transform: translate(-50%, .75em);
-  content: '';
+  transform: translate(-50%, 0.75em);
+  content: "";
   width: 200px;
   height: 2px;
   background-color: #f9d71c;
@@ -179,7 +189,12 @@ header {
   color: #f9d71c;
 }
 
+.secondary_nav .active {
+  color: #f9d71c;
+}
+
 .main {
+  grid-area: main;
   margin: 4em 2em;
 }
 
@@ -187,7 +202,7 @@ header {
   padding: 1em;
   display: flex;
   flex-direction: column;
-  line-height: 1.6em;  
+  line-height: 1.6em;
   margin-bottom: 5em;
 }
 
@@ -211,22 +226,146 @@ header {
 
 .planet_data {
   margin: 2em 0;
-  color: #FFF;
+  color: #fff;
 }
 
-.planet_data h4 {  
+.planet_data h4 {
+  text-align: center;
   font-size: 1.5rem;
-  margin-bottom: .25em;
+  margin-bottom: 0.8em;
   color: #f9d71c;
 }
 
 .planet_data ul {
   margin: 0;
-  padding: 1em;
 }
 
 .planet_desc {
   color: #fff;
+}
+
+footer {
+  grid-area: footer;
+  color: #fff;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+
+footer .social-media {
+  color: #fff;
+  margin-bottom: 0.6em;
+  font-size: 1.2rem;
+}
+
+/*Estilos pagina contacto*/
+.contact {
+  grid-column: 2/4;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.contact label {
+  color: #fff;
+}
+
+.contact input {
+  margin-bottom: 0.75em;
+}
+
+.contact input[type="text"],
+.contact input[type="number"] {
+  padding: 0.5em 0;
+}
+
+.buttons {
+  align-self: flex-end;
+  margin-top: 1em;
+}
+
+.contact input[type="submit"],
+.contact input[type="reset"] {
+  width: 10em;
+  font-size: 1rem;
+  padding: 0.5em 0.25em;
+  background-color: #f9d71c;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
+.contact input[type="submit"]:hover,
+.contact input[type="reset"]:hover {
+  color: #fff;
+}
+
+.mensaje_exito,
+.mensaje_error {
+  display: none;
+  width: 80%;
+  margin: 2em auto;
+  padding: 1em;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.mensaje_exito {
+  background-color: lightgreen;
+  color: green;
+  border: 2px solid green;
+  text-align: center;
+}
+
+.mensaje_error {
+  background-color: lightpink;
+  color: red;
+  border: 2px solid red;
+}
+
+/*Estilos quienes somos*/
+.quienes-somos {
+  grid-column: 3 / 4;
+  color: #fff;
+  height: max-content;
+  margin-top: 5em;
+  letter-spacing: 0.15em;
+}
+
+.quienes-somos h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.quienes-somos h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+.quienes-somos p {
+  margin-bottom: 4em;
+  line-height: 1.5em;
+}
+
+.ubicacion {
+  margin-bottom: 2em;
 }
 
 @media screen and (min-width: 768px) {
@@ -236,25 +375,25 @@ header {
 
   header {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr auto minmax(600px, 4fr) 1fr;
   }
 
   .logo {
-    grid-column: 2 / 3;    
+    grid-column: 2 / 3;
   }
 
   .nav {
     all: unset;
-    grid-column: 3 / 4;   
+    grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
-    align-items: center;     
+    align-items: center;
   }
 
-  .nav ul {    
-    display: flex;    
+  .nav ul {
+    display: flex;
     justify-content: flex-end;
-  } 
+  }
 
   .nav li {
     margin-left: 3em;
@@ -267,7 +406,14 @@ header {
 
   .secondary_nav {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+  }
+
+  .secondary_nav h3 {
+    color: #f9d71c;
+    margin-bottom: 0;
   }
 
   .secondary_nav h3::after {
@@ -281,4 +427,96 @@ header {
     margin-bottom: 0;
     padding: 0;
   }
-} 
+
+  .secondary_nav li {
+    margin-bottom: 0;
+  }
+
+  .planet {
+    display: grid;
+    grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
+    grid-template-areas:
+      "title title"
+      "img datos"
+      "desc desc";
+  }
+
+  .planet_img {
+    grid-area: img;
+  }
+
+  .planet_title {
+    grid-area: title;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .planet_data {
+    grid-area: datos;
+  }
+
+  .planet_data h4 {
+    text-align: left;
+  }
+
+  .planet_data ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .planet_desc {
+    grid-area: desc;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-areas:
+      "hero hero hero hero"
+      "nav nav main main"
+      "footer footer footer footer";
+  }
+
+  .hero {
+    margin-bottom: 0;
+  }
+
+  .hero_title {
+    font-size: 4rem;
+  }
+
+  .secondary_nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 2em;
+  }
+
+  .secondary_nav h3 {
+    margin-bottom: 3em;
+  }
+
+  .secondary_nav h3::after {
+    display: block;
+  }
+
+  .secondary_nav ul {
+    flex-direction: column;
+  }
+
+  .secondary_nav li {
+    margin-bottom: 2em;
+  }
+
+  .main {
+    margin: 0 1em;
+  }
+}
+
+/*utilidad*/
+.mostrar {
+  display: block;
+}
+
+.ocultar {
+  display: none;
+}

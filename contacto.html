@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Sistema Solar</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Sistema Solar</h1>
+      <nav id="nav" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes.html">Quienes Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-toggle">
+        <span></span>
+      </div>
+    </header>
+    <div class="container">
+      <div class="hero">
+        <h2 class="hero_title">El Sistema Solar</h2>
+      </div>
+      <main class="contact">
+        <h2>Envianos tu consulta!</h2>
+        <div class="mensaje_exito">Consulta enviada correctamente!</div>
+        <div class="mensaje_error">
+          <ul></ul>
+        </div>
+        <form action="#" method="GET" id="contact-form">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" />
+          <label for="nombre">Apellido</label>
+          <input type="text" id="apellido" />
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" />
+          <label for="consulta">Consulta</label>
+          <textarea id="consulta" cols="30" rows="10"></textarea>
+          <div class="buttons">
+            <input type="submit" />
+            <input type="reset" />
+          </div>
+        </form>
+      </main>
+    </div>
+    <footer>
+      <div class="social-media">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <h6>Copywright 2022 - Rodrigo Lascano</h6>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+  </body>
+</html>
